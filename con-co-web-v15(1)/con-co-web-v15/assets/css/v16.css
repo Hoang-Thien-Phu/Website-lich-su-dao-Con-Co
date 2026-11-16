@@ -1,0 +1,47 @@
+/* V16 - bo sung giao dien hanh chinh, gon va de doc */
+.nav-more { position: relative; display: flex; align-items: stretch; }
+.nav-more summary { display: inline-flex; align-items: center; min-height: 76px; cursor: pointer; color: #172f45; font-size: 14px; font-weight: 600; list-style: none; white-space: nowrap; }
+.nav-more summary::-webkit-details-marker { display: none; }
+.nav-more summary::after { content: " ▾"; color: #006bb6; }
+.nav-more[open] summary { color: #006bb6; }
+.nav-more-menu { position: absolute; z-index: 30; top: 100%; right: 0; display: grid; min-width: 190px; border: 1px solid #d8e1e6; background: #fff; box-shadow: 0 3px 10px rgba(0,0,0,.08); }
+.nav-more-menu a { display: block; min-height: 0; padding: 10px 13px; border-bottom: 1px solid #edf0f2; color: #17334a; font-size: 13px; font-weight: 400; }
+.nav-more-menu a:last-child { border-bottom: 0; }
+.nav-more-menu a:hover, .nav-more-menu a.active { background: #eef6fa; color: #006bb6; }
+.v16-main { padding-top: 24px; padding-bottom: 48px; }
+.v16-lead { max-width: 780px; margin: 0 0 22px; color: var(--muted); }
+.v16-panel { margin: 20px 0; padding: 22px; border: 1px solid var(--line); background: var(--paper); }
+.v16-panel h2 { margin: 0 0 12px; color: var(--blue-dark); font-size: 21px; }
+.v16-panel p { margin: 0 0 12px; }
+.v16-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.v16-field { display: grid; gap: 6px; color: var(--text); font-size: 13px; font-weight: 700; }
+.v16-field input, .v16-field select { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid #cbd7de; border-radius: 2px; background: #fff; color: #17334a; font: inherit; font-weight: 400; }
+.v16-field input:focus { outline: 2px solid #80bce0; outline-offset: 1px; }
+.v16-hint { padding: 12px 14px; border-left: 3px solid #006bb6; background: #eef6fa; color: #355568; font-size: 13px; }
+.v16-form-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.v16-status { color: #376c42; font-size: 13px; }
+.v16-table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--paper); }
+.v16-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.v16-table th, .v16-table td { padding: 11px 13px; border-bottom: 1px solid var(--line); text-align: left; }
+.v16-table th { background: #eef6fa; color: #17415d; font-size: 12px; }
+.v16-table tr:last-child td { border-bottom: 0; }
+.v16-table .rank-number { width: 60px; color: #006bb6; font-weight: 700; }
+.v16-empty { padding: 30px 18px; border: 1px dashed #b9cbd6; background: #f8fbfc; color: #5d7180; text-align: center; }
+.v16-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+.v16-gallery-slot { min-height: 150px; display: grid; place-items: center; padding: 18px; border: 1px dashed #b9cbd6; background: #f8fbfc; color: #647785; text-align: center; font-size: 13px; }
+.v16-unity-frame { width: 100%; min-height: 520px; border: 1px solid var(--line); background: #101820; }
+.v16-unity-frame iframe { display: block; width: 100%; height: 520px; border: 0; background: #101820; }
+.v16-page-title { margin: 8px 0 14px; color: var(--blue-dark); font-size: clamp(28px, 4vw, 38px); line-height: 1.2; }
+.v16-small { color: var(--muted); font-size: 12px; }
+body[data-theme="dark"] .nav-more summary { color: var(--text); }
+body[data-theme="dark"] .nav-more-menu { border-color: var(--line); background: var(--paper); }
+body[data-theme="dark"] .nav-more-menu a { border-color: var(--line); color: var(--text); }
+body[data-theme="dark"] .v16-field input { border-color: var(--line); background: var(--paper); color: var(--text); }
+body[data-theme="dark"] .v16-hint, body[data-theme="dark"] .v16-empty, body[data-theme="dark"] .v16-gallery-slot, body[data-theme="dark"] .v16-table th { background: var(--blue-pale-2); color: var(--text); }
+@media (max-width: 720px) {
+  .nav-more summary { min-height: 43px; font-size: 12px; }
+  .nav-more-menu { position: fixed; top: auto; right: 14px; }
+  .v16-form-grid, .v16-gallery-grid { grid-template-columns: 1fr; }
+  .v16-panel { padding: 15px; }
+  .v16-unity-frame, .v16-unity-frame iframe { min-height: 300px; height: 300px; }
+}

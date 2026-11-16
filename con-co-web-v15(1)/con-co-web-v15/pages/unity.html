@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Không gian học tập số về địa lý, lịch sử, thiên nhiên và bảo tồn đảo Cồn Cỏ."><title>Unity 3D – Cồn Cỏ ảo</title><link rel="stylesheet" href="assets/css/site.css"><link rel="stylesheet" href="assets/css/v16-content.css"></head>
+<body data-page="unity">
+<header class="site-header"><div class="gov-strip">CỒN CỎ • KHÔNG GIAN HỌC TẬP SỐ</div>
+<div class="nav-shell page-width"><a class="brand" href="home.html"><span class="brand-mark">CC</span><span><strong>CỒN CỎ</strong><small>UNITY WEBGL / KHÔNG GIAN 3D</small></span></a>
+<nav class="nav" aria-label="Điều hướng chính">
+<a class="" href="home.html">Trang chủ</a>
+<a class="" href="journey.html">Khám phá</a>
+<a class="" href="document.html">Tài liệu</a>
+<a class="" href="exam.html">Trắc nghiệm</a>
+<a class="" href="game.html">Em làm chủ Cồn Cỏ</a>
+<a class="" href="gallery.html">Thư viện ảnh</a>
+<a class="active" href="unity.html">Unity 3D</a>
+</nav><div class="nav-tools"><button id="themeToggle" class="theme-toggle">◐</button></div></div></header>
+
+<main class="route page-width"><div class="route-meta"><span>KHU VỰC UNITY RIÊNG</span><span>WEBGL BUILD</span></div>
+<div class="route-title"><div><div class="eyebrow">TRẢI NGHIỆM 3D</div><h1>Không gian<br><em>Cồn Cỏ ảo.</em></h1></div><p>Đây là tab riêng để bạn tự phát triển và tích hợp bản Unity. Website đã chuẩn bị sẵn vị trí nhúng; bạn chỉ cần chép bản build WebGL vào đúng thư mục.</p></div>
+<section class="v16-unity-panel"><div class="v16-unity-toolbar"><strong>UNITY WEBGL PLAYER</strong><span>Thư mục: <code>unity-build/</code></span></div>
+<iframe id="unityFrame" src="unity-build/index.html" title="Trải nghiệm Unity WebGL Cồn Cỏ" loading="lazy" allow="fullscreen; autoplay"></iframe>
+<div class="v16-unity-fallback" id="unityFallback"><h2>Chưa có bản Unity được thêm vào</h2><p>Khi bạn build Unity sang WebGL, hãy chép <strong>toàn bộ nội dung thư mục build</strong> vào thư mục <code>unity-build/</code> nằm cạnh file <code>unity.html</code>.</p><p>Trong đó cần có file <code>index.html</code> cùng các thư mục/tệp build do Unity xuất ra. Không chỉ chép riêng file HTML.</p></div></section>
+<section class="v16-howto"><h2>Cách đưa bản Unity của bạn vào đây</h2><ol><li>Trong Unity, chọn nền tảng WebGL và thực hiện Build.</li><li>Mở thư mục kết quả Unity đã xuất.</li><li>Chép tất cả tệp và thư mục trong kết quả build vào <code>con-co-web-v15/unity-build/</code>.</li><li>Đảm bảo đường dẫn cuối cùng là <code>unity-build/index.html</code>.</li><li>Mở website qua máy chủ web để chạy thử. Không nên mở trực tiếp bằng <code>file://</code>.</li></ol><p class="source-note">Trang này chỉ là khung nhúng. Chưa có trò chơi Unity đi kèm; nội dung 3D là phần bạn sẽ tự thêm.</p></section></main>
+
+<footer class="footer"><div class="page-width footer-inner"><div><strong>ĐẶC KHU CỒN CỎ • TỈNH QUẢNG TRỊ</strong><span>Học tập, tìm hiểu lịch sử và gìn giữ giá trị thiên nhiên – biển đảo.</span></div><div class="footer-links"><a href="sources.html">Nguồn tham khảo</a><a href="progress.html">Tiến độ</a><a href="unity.html">Unity 3D</a></div></div></footer>
+<script src="assets/js/site.js"></script><script src="assets/js/file-route.js"></script>
+<script>
+const frame=document.getElementById('unityFrame'), fallback=document.getElementById('unityFallback');
+frame.addEventListener('error',()=>{fallback.hidden=false;});
+frame.addEventListener('load',()=>{try{if(frame.contentDocument && frame.contentDocument.body && frame.contentDocument.body.innerText.includes('UNITY_BUILD_NOT_INSTALLED'))fallback.hidden=false;}catch(_){ }});
+</script></body></html>
